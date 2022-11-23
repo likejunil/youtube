@@ -18,13 +18,14 @@ const SearchHeader = () => {
         setValue('');
     };
     
-    useEffect(() => setValue(keyword || ''), [keyword]);
+    useEffect(() => setValue(keyword || ''),
+        [keyword]);
     
     return (
-        <header>
+        <header className='w-full flex p-4 text-2xl border-b border-zinc-600 mb-4'>
             <Link to='/'>
                 <span><AiFillYoutube/></span>
-                <h1>Youtube</h1>
+                <h1 className='text-2xl'>Youtube</h1>
             </Link>
             <form onSubmit={handleSubmit}>
                 <input
